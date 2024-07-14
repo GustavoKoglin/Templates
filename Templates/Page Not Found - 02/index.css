@@ -1,0 +1,103 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.error {
+    display: flex; /* Flexbox para centralizar */
+    flex-direction: column; /* Coluna para alinhar verticalmente */
+    animation: slideIn 1s ease-in-out;
+}
+
+.error h1 {
+    font-size: 10rem;
+    
+    margin-bottom: 34px;
+    color: #3498db;
+    animation: rotate 2s infinite linear;
+    animation-delay: 2s; /* Rotação começa após 2 segundos */
+}
+
+.error p {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 10px 0 0; /* Margem acima do texto */
+}
+
+.error button {
+    margin-top: 10px; /* Espaçamento entre o texto e o botão */
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.error button:hover {
+    background-color: #04A5D9;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .error h1 {
+        font-size: 6rem;
+    }
+
+    .error p {
+        font-size: 1.2rem;
+    }
+
+    .error button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .error h1 {
+        font-size: 4rem;
+    }
+
+    .error p {
+        font-size: 1rem;
+    }
+
+    .error button {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+}
